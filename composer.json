@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "classmap": [
+            "classes/"
+        ]
+    },
+    "require": {
+        "phpunit/phpunit": "^8.4",
+        "nesbot/carbon": "^2.35"
+    }
+}
