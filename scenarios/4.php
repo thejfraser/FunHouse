@@ -17,5 +17,5 @@ $rota->addShift($cyclops);
 //and Wolverine show receive a supplement for the time between the end of Cyclops' shift and his shift
 
 $singleManningCheck = new SingleManning($rota);
-echo $singleManningCheck->doCalculateMinutes() === (60 + (3*60)) ? 'pass' : 'fail';
+echo $singleManningCheck->doCalculateMinutes() === (60 + (3 * 60)) ? 'pass' : 'fail';
 echo PHP_EOL;

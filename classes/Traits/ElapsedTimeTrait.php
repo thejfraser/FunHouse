@@ -5,7 +5,8 @@ namespace App\Traits;
 
 Trait ElapsedTimeTrait
 {
-    public function getElapsedTime() {
+    public function getElapsedTime()
+    {
         return $this->end_time->diffInMinutes($this->start_time);
     }
 }

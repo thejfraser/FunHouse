@@ -17,5 +17,5 @@ $rota->addShift($gomora);
 //and Gomora show receive a supplement for the time between the end of Wolverine's shift and the end of her shift
 
 $singleManningCheck = new SingleManning($rota);
-echo $singleManningCheck->doCalculateMinutes() === (60 + (2*60)) ? 'pass' : 'fail';
+echo $singleManningCheck->doCalculateMinutes() === (60 + (2 * 60)) ? 'pass' : 'fail';
 echo PHP_EOL;

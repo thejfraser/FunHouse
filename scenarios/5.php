@@ -21,5 +21,5 @@ $rota->addShift($juggernaut);
 //and Wolverine show receive a supplement for the time Juggernaut was on break
 
 $singleManningCheck = new SingleManning($rota);
-echo $singleManningCheck->doCalculateMinutes() === ((3*60)) ? 'pass' : 'fail';
+echo $singleManningCheck->doCalculateMinutes() === ((3 * 60)) ? 'pass' : 'fail';
 echo PHP_EOL;

@@ -14,5 +14,5 @@ $rota->addShift($blackWidow);
 //She should get a full day of supplement
 
 $singleManningCheck = new SingleManning($rota);
-echo $singleManningCheck->doCalculateMinutes() === (8*60) ? 'pass' : 'fail';
+echo $singleManningCheck->doCalculateMinutes() === (8 * 60) ? 'pass' : 'fail';
 echo PHP_EOL;

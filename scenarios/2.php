@@ -17,5 +17,5 @@ $rota->addShift($thor);
 //and Thor should receive a full supplement
 
 $singleManningCheck = new SingleManning($rota);
-echo $singleManningCheck->doCalculateMinutes() === (12*60) ? 'pass' : 'fail';
+echo $singleManningCheck->doCalculateMinutes() === (12 * 60) ? 'pass' : 'fail';
 echo PHP_EOL;

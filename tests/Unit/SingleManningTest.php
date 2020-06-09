@@ -3,9 +3,9 @@
 namespace Tests\Feature;
 
 use App\Models\Rota;
-use App\Routines\SingleManning;
 use App\Models\Shift;
 use App\Models\ShiftBreak;
+use App\Routines\SingleManning;
 use PHPUnit\Framework\TestCase;
 
 class SingleManningTest extends TestCase
@@ -51,7 +51,7 @@ class SingleManningTest extends TestCase
         $rota->addShift($shift1);
 
         $singleManning = new SingleManning($rota);
-        $this->assertEquals(6*60, $singleManning->doCalculateMinutes());
+        $this->assertEquals(6 * 60, $singleManning->doCalculateMinutes());
     }
 
     public function testTwoOverlappingShifts()
@@ -65,7 +65,7 @@ class SingleManningTest extends TestCase
         $rota->addShift($shift2);
 
         $singleManning = new SingleManning($rota);
-        $this->assertEquals(3*60, $singleManning->doCalculateMinutes());
+        $this->assertEquals(3 * 60, $singleManning->doCalculateMinutes());
     }
 
     public function testTwoOverlappingShiftsWithBreak()
@@ -80,7 +80,7 @@ class SingleManningTest extends TestCase
         $rota->addShift($shift2);
 
         $singleManning = new SingleManning($rota);
-        $this->assertEquals(3.25*60, $singleManning->doCalculateMinutes());
+        $this->assertEquals(3.25 * 60, $singleManning->doCalculateMinutes());
     }
 
     public function testTwoOverlappingShiftsWithBreakOverlap()
@@ -96,7 +96,7 @@ class SingleManningTest extends TestCase
         $rota->addShift($shift2);
 
         $singleManning = new SingleManning($rota);
-        $this->assertEquals((180+14+15), $singleManning->doCalculateMinutes());
+        $this->assertEquals((180 + 14 + 15), $singleManning->doCalculateMinutes());
     }
 
     public function testThreeOverlappingShifts()
@@ -114,7 +114,7 @@ class SingleManningTest extends TestCase
 
         $singleManning = new SingleManning($rota);
         //9 to 12, 4 to 7
-        $this->assertEquals(6*60, $singleManning->doCalculateMinutes());
+        $this->assertEquals(6 * 60, $singleManning->doCalculateMinutes());
     }
 
     public function testTwoWithMiddayClosure()
@@ -141,6 +141,6 @@ class SingleManningTest extends TestCase
         $rota->addShift($shift1);
 
         $singleManning = new SingleManning($rota);
-        $this->assertEquals(8*60, $singleManning->doCalculateMinutes());
+        $this->assertEquals(8 * 60, $singleManning->doCalculateMinutes());
     }
 }
